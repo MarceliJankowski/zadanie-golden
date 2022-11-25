@@ -23,7 +23,7 @@ html {
 
   // COLORS
   --clr-0: #fff;
-  --clr-1: #0e0e0e;
+  --clr-1: #202020;
   --clr-2: gold;
   --clr-3: #5e5e5e;
 
@@ -32,7 +32,7 @@ html {
   --fs-5: 4rem;
   --fs-4: 1.8rem;
   --fs-3: 1.5rem;
-  --fs-2: 1.3rem;
+  --fs-2: 1.35rem;
 
   // FONT WEIGHTS
   --fw-6: 600;
@@ -209,4 +209,55 @@ h6 {
 
 .services-list-item__title {
   font-size: var(--fs-4);
+}
+
+// PORTFOLIO
+
+.portfolio {
+  padding-inline: var(--section-inline-padding);
+  padding-block: var(--section-block-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio__title {
+  font-size: var(--fs-5);
+  text-transform: uppercase;
+}
+
+.portfolio__text {
+  font-size: var(--fs-3);
+  font-style: italic;
+}
+
+.portfolio-list {
+  width: 100%;
+  margin-top: 8rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+
+.portfolio-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-list-item__image {
+  width: 100%;
+  height: 32rem;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 2.4rem;
+}
+
+.portfolio-list-item__title {
+  font-size: var(--fs-4);
+}
+
+.portfolio-list-item__text {
+  font-size: var(--fs-3);
 }
