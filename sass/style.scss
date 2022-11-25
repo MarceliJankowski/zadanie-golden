@@ -13,10 +13,6 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #3b3b3b;
-}
-
 :root {
   --section-inline-padding: 15%;
 
@@ -25,10 +21,34 @@ body {
   --clr-2: gold;
 
   // FONT SIZES
+  --fs-6: 7.2rem;
+  --fs-5: 4.2rem;
+  --fs-4: 1.8rem;
   --fs-3: 1.5rem;
 
   // FONT WEIGHTS
   --fw-6: 600;
+}
+
+// UTILITY
+
+.btn {
+  background-color: var(--clr-2);
+  border-radius: 4px;
+  padding: 1.2em 2.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--clr-0);
+  font-weight: var(--fw-6);
+  transition: transform 200ms ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 // HEADER
@@ -72,4 +92,30 @@ body {
 
 .header-list__link:hover {
   color: var(--clr-2);
+}
+
+// HERO
+.hero {
+  height: 75vh;
+  background-color: #3b3b3b;
+  color: var(--clr-0);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__greet {
+  font-family: "Great Vibes", sans-serif;
+  font-size: var(--fs-5);
+}
+
+.hero__title {
+  font-size: var(--fs-6);
+  text-transform: uppercase;
+}
+
+.hero__link {
+  font-size: var(--fs-4);
 }
