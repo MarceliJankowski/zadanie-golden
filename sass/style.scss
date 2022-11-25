@@ -15,6 +15,42 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media (max-width: 1700px) {
+    font-size: 58%;
+  }
+
+  @media (max-width: 1600px) {
+    font-size: 55%;
+  }
+
+  @media (max-width: 1500px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 1300px) {
+    font-size: 48%;
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 45%;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 42%;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 40%;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 38%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 36%;
+  }
 }
 
 :root {
@@ -41,6 +77,14 @@ html {
   --fw-3: 300;
   --fw-2: 200;
   --fw-1: 100;
+
+  @media (max-width: 1500px) {
+    --section-inline-padding: 10%;
+  }
+
+  @media (max-width: 800px) {
+    --fs-6: 6.2rem;
+  }
 }
 
 ::selection {
@@ -62,6 +106,11 @@ h4,
 h5,
 h6 {
   color: var(--clr-1);
+}
+
+section {
+  padding-inline: var(--section-inline-padding);
+  padding-block: var(--section-block-padding);
 }
 
 // UTILITIES
@@ -110,8 +159,16 @@ h6 {
 
 .header-list {
   display: flex;
-  gap: 3.5rem;
+  gap: 3rem;
   list-style: none;
+
+  @media (max-width: 800px) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    gap: 1rem;
+  }
 }
 
 .header-list__link {
@@ -131,7 +188,7 @@ h6 {
 // HERO
 
 .hero {
-  height: 75vh;
+  min-height: 75vh;
   background-color: #3b3b3b;
   color: var(--clr-0);
   display: flex;
@@ -139,6 +196,10 @@ h6 {
   gap: 4rem;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 450px) {
+    min-height: 68vh;
+  }
 }
 
 .hero__greet {
@@ -151,6 +212,7 @@ h6 {
   font-size: var(--fs-6);
   text-transform: uppercase;
   color: var(--clr-0);
+  text-align: center;
 }
 
 .hero__link {
@@ -160,9 +222,8 @@ h6 {
 // SERVICES
 
 .services {
-  padding-block: var(--section-block-padding);
-  padding-inline: var(--section-inline-padding);
   width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,8 +245,16 @@ h6 {
 .services-list {
   list-style: none;
   margin-top: 6rem;
-  display: flex;
-  gap: 5rem;
+  width: 100%;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+
+  @media (max-width: 450px) {
+    width: 80%;
+  }
 }
 
 .services-list-item {
@@ -214,8 +283,6 @@ h6 {
 // PORTFOLIO
 
 .portfolio {
-  padding-inline: var(--section-inline-padding);
-  padding-block: var(--section-block-padding);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -268,7 +335,7 @@ h6 {
   display: flex;
   padding-inline: var(--section-inline-padding);
   padding-block: 4rem;
-  gap: 20vw;
+  justify-content: space-between;
 }
 
 .footer__text {
