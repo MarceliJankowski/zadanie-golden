@@ -1,10 +1,14 @@
 // GLOBAL
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+*:not(i) {
   font-family: "Alexandria", sans-serif;
 }
 
@@ -15,22 +19,52 @@ html {
 
 :root {
   --section-inline-padding: 15%;
+  --section-block-padding: 10rem;
 
   // COLORS
   --clr-0: #fff;
+  --clr-1: #0e0e0e;
   --clr-2: gold;
+  --clr-3: #5e5e5e;
 
   // FONT SIZES
   --fs-6: 7.2rem;
-  --fs-5: 4.2rem;
+  --fs-5: 4rem;
   --fs-4: 1.8rem;
   --fs-3: 1.5rem;
+  --fs-2: 1.3rem;
 
   // FONT WEIGHTS
   --fw-6: 600;
+  --fw-5: 500;
+  --fw-4: 400;
+  --fw-3: 300;
+  --fw-2: 200;
+  --fw-1: 100;
 }
 
-// UTILITY
+::selection {
+  background-color: var(--clr-2);
+  color: var(--clr-0);
+}
+
+p {
+  color: var(--clr-3);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-3);
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--clr-1);
+}
+
+// UTILITIES
 
 .btn {
   background-color: var(--clr-2);
@@ -95,6 +129,7 @@ html {
 }
 
 // HERO
+
 .hero {
   height: 75vh;
   background-color: #3b3b3b;
@@ -109,13 +144,69 @@ html {
 .hero__greet {
   font-family: "Great Vibes", sans-serif;
   font-size: var(--fs-5);
+  color: var(--clr-0);
 }
 
 .hero__title {
   font-size: var(--fs-6);
   text-transform: uppercase;
+  color: var(--clr-0);
 }
 
 .hero__link {
+  font-size: var(--fs-4);
+}
+
+// SERVICES
+
+.services {
+  padding-block: var(--section-block-padding);
+  padding-inline: var(--section-inline-padding);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services__title {
+  font-size: var(--fs-5);
+  text-transform: uppercase;
+  color: var(--clr-1);
+  margin-bottom: 1rem;
+}
+
+.services__text {
+  font-size: var(--fs-3);
+  font-style: italic;
+}
+
+.services-list {
+  list-style: none;
+  margin-top: 6rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.services-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  align-items: center;
+}
+
+.services-list-item__icon {
+  color: var(--clr-2);
+  font-size: 4rem;
+  padding: 1.6rem;
+  aspect-ratio: 1 / 1;
+  border: solid 2px currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.services-list-item__title {
   font-size: var(--fs-4);
 }
